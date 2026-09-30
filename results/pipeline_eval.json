@@ -1,0 +1,67 @@
+{
+  "data_quality": {
+    "batches": 360,
+    "injected_faults": 10,
+    "fault_types": {
+      "schema_drift": 2,
+      "missing_file": 2,
+      "volume_drop": 2,
+      "duplicates": 1,
+      "null_keys": 2,
+      "stale_resend": 1
+    },
+    "caught": 10,
+    "silent_failures": 0,
+    "false_alarms": 0,
+    "rows_loaded_pos": 735733,
+    "rows_loaded_carrier": 168825,
+    "dq_checks_run": 2498
+  },
+  "reconciliation": {
+    "orphan_activation": {
+      "injected_in_scope": 171,
+      "detected": 171,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "store_mismatch": {
+      "injected_in_scope": 174,
+      "detected": 174,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "status_counts": {
+      "matched": 162540,
+      "missing_activation": 19150,
+      "orphan_activation": 171,
+      "store_mismatch": 174
+    },
+    "dates_reconciled": 170
+  },
+  "tiering": {
+    "stores": 120,
+    "holdout_window": "2026-05-01 to 2026-06-29",
+    "spearman_composite_vs_future_revenue": 0.9,
+    "spearman_revenue_only_vs_future_revenue": 0.949,
+    "avg_future_revenue_by_tier": {
+      "Platinum": 2366266,
+      "Gold": 1486513,
+      "Silver": 946150,
+      "Bronze": 436248
+    },
+    "tiers_monotonic": true,
+    "platinum_vs_bronze_ratio": 5.42,
+    "tier_counts": {
+      "Platinum": 12,
+      "Gold": 30,
+      "Silver": 42,
+      "Bronze": 36
+    }
+  },
+  "query_performance": {
+    "query": "select sum(qty * unit_price) from raw.pos_transactions where store_id = 'S014' and txn_ts >= '2026-03-01' and txn_ts < '2026-04-01'",
+    "median_ms_without_index": 37.8,
+    "median_ms_with_index": 0.6,
+    "speedup_x": 63.0
+  }
+}

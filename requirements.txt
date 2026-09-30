@@ -1,0 +1,16 @@
+pandas==3.0.6
+numpy==2.4.6
+scipy==1.17.1
+scikit-learn==1.9.1
+joblib==1.6.0
+psycopg[binary]==3.3.6
+pgvector==0.5.0
+dbt-core==1.12.5
+dbt-postgres==1.11.0
+fastapi==0.142.2
+uvicorn==0.54.0
+httpx==0.28.1
+anthropic==1.9.0
+pytest==9.1.1
+# Optional: pip install snowflake-connector-python[pandas] to enable pipeline/snowflake_publish.py
+# Airflow is installed separately (see README): it pins its own dependency versions.

@@ -1,0 +1,17 @@
+version: 2
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: pos_transactions
+        loaded_at_field: _loaded_at
+        freshness:
+          warn_after: {count: 26, period: hour}
+          error_after: {count: 50, period: hour}
+      - name: carrier_activations
+        loaded_at_field: _loaded_at
+      - name: stores
+  - name: ops
+    schema: ops
+    tables:
+      - name: load_log

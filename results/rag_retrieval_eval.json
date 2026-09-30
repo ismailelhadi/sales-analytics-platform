@@ -1,0 +1,63 @@
+{
+  "retrieval_test": {
+    "vector": {
+      "n": 27,
+      "hit@1": 0.926,
+      "hit@3": 0.963,
+      "mrr": 0.942
+    },
+    "keyword": {
+      "n": 27,
+      "hit@1": 0.63,
+      "hit@3": 1.0,
+      "mrr": 0.815
+    },
+    "hybrid": {
+      "n": 27,
+      "hit@1": 0.926,
+      "hit@3": 0.963,
+      "mrr": 0.954
+    }
+  },
+  "retrieval_test_by_kind": {
+    "doc": {
+      "n": 14,
+      "hit@1": 0.857,
+      "hit@3": 0.929,
+      "mrr": 0.911
+    },
+    "incident": {
+      "n": 4,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0
+    },
+    "store": {
+      "n": 9,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0
+    }
+  },
+  "abstention": {
+    "threshold_from_dev": 0.45,
+    "dev": {
+      "abstain_correct": 7,
+      "abstain_wrong": 1,
+      "answered_unanswerable": 3,
+      "answered_ok": 26,
+      "accuracy": 0.892,
+      "unanswerable_caught": 0.7,
+      "answerable_kept": 0.963
+    },
+    "test": {
+      "abstain_correct": 7,
+      "abstain_wrong": 1,
+      "answered_unanswerable": 3,
+      "answered_ok": 26,
+      "accuracy": 0.892,
+      "unanswerable_caught": 0.7,
+      "answerable_kept": 0.963
+    }
+  }
+}

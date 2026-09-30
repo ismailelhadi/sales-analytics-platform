@@ -1,0 +1,11 @@
+data/
+rag/artifacts/
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+logs/
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
